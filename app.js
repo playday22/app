@@ -32,7 +32,6 @@ else
 			platform = "desktop";
 		}
 	}
-	console.log(platform);
 }
 
 function copyToClipboard(str) {
