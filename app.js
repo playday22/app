@@ -22,8 +22,17 @@ else
 		platform = "mobile";
 	}
 	else {
-		platform = "desktop";
+		if (iPad()) {
+			if(user_id != 0)
+				platform = "mobile";
+			else
+				platform = "ipad";
+		}
+		else {
+			platform = "desktop";
+		}
 	}
+	console.log(platform);
 }
 
 function copyToClipboard(str) {
