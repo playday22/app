@@ -126,6 +126,9 @@ function create_input_new(name, x, y, width, height, type, maxlength, border) {
 		if(iPad() || platform.includes("desktop")) {
 			input.style.fontSize = '18px';
 		}
+		else if(iOS()) {
+			input.style.fontSize = '12px';
+		}
 		else {
 			input.style.fontSize = '14px';
 		}
