@@ -131,7 +131,7 @@ function create_input_new(name, x, y, width, height, type, maxlength, border) {
 			input.style.fontSize = '14px';
 		}
 		else {
-			input.style.fontSize = '1px';
+			input.style.fontSize = '1em';
 		}
 	}
 }
