@@ -125,13 +125,13 @@ function create_input_new(name, x, y, width, height, type, maxlength, border) {
 			input.style.fontSize = '14px';
 		}
 		else if(iOS()) {
-			input.style.fontSize = '12px';
+			input.style.fontSize = '8px';
 		}
 		else if(is_android()) {
 			input.style.fontSize = '14px';
 		}
 		else {
-			input.style.fontSize = '12px';
+			input.style.fontSize = '8px';
 		}
 	}
 }
