@@ -106,7 +106,7 @@ function create_input(name) {
 
 function create_input_new(name, x, y, width, height, type, maxlength, border) {
 	if (!has_element(name)) {
-		div.insertAdjacentHTML('beforeend', `<input type="${type}" id="${name}"/>`);
+		div.insertAdjacentHTML('beforeend', `<input type="search" id="${name}"/>`); //${type}
 		var input = document.getElementById(`${name}`);
 		if (maxlength > 0) {
 			input.setAttribute('maxlength', `${maxlength}`)
@@ -125,13 +125,13 @@ function create_input_new(name, x, y, width, height, type, maxlength, border) {
 			input.style.fontSize = '14px';
 		}
 		else if(iOS()) {
-			input.style.fontSize = '1px';
+			input.style.fontSize = '10px';
 		}
 		else if(is_android()) {
 			input.style.fontSize = '14px';
 		}
 		else {
-			input.style.fontSize = '1em';
+			input.style.fontSize = '10px';
 		}
 	}
 }
