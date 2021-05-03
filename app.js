@@ -106,7 +106,7 @@ function create_input(name) {
 
 function create_input_new(name, x, y, width, height, type, maxlength, border) {
 	if (!has_element(name)) {
-		div.insertAdjacentHTML('beforeend', `<input type="search" id="${name}"/>`); //${type}
+		div.insertAdjacentHTML('beforeend', `<input type="${type}" style="left:${x};top:${y};width:${width};height:${height};padding:0;box-sizing:border-box;-moz-appearance:textfield;-webkit-appearance:textfield;appearance: textfield;display: block;line-height:${height};" id="${name}"/>`);
 		var input = document.getElementById(`${name}`);
 		if (maxlength > 0) {
 			input.setAttribute('maxlength', `${maxlength}`)
@@ -117,10 +117,10 @@ function create_input_new(name, x, y, width, height, type, maxlength, border) {
 		}
 		else
 			input.style.borderRadius = border;
-		input.style.left = x;
+		/*input.style.left = x;
 		input.style.top = y;
 		input.style.width = width;
-		input.style.height = height;
+		input.style.height = height;*/
 		if(iPad() || platform.includes("desktop")) {
 			input.style.fontSize = '14px';
 		}
