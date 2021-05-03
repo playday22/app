@@ -1,4 +1,4 @@
-var user_id = "";
+var user_id = '';
 var platform = '';
 var div = null;
 var inited = false;
@@ -122,15 +122,22 @@ function create_input_new(name, x, y, width, height, type, maxlength, border) {
 		input.style.width = width;
 		input.style.height = height;
 		if(iPad() || platform.includes("desktop")) {
-			input.style.fontSize = '18px';
-		}
-		else if(iOS()) {
-			input.style.fontSize = '10px';
-		}
-		else {
 			input.style.fontSize = '14px';
 		}
+		else if(iOS()) {
+			input.style.fontSize = '12px';
+		}
+		else if(is_android()) {
+			input.style.fontSize = '14px';
+		}
+		else {
+			input.style.fontSize = '12px';
+		}
 	}
+}
+
+function is_android() {
+	return navigator.userAgent.toLowerCase().indexOf("android") > -1;
 }
 
 function iOS() {
